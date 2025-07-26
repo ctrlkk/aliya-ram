@@ -8,12 +8,21 @@
 
 ## 它如何运行
 
-- AliyaRAM通过MCP向大模型暴露数据接口，后端使用bleve进行数据的向量索引，LLMs可以通过MCP向AliyaRAM写入记忆，并在必要的时候读取记忆。
+- AliyaRAM通过MCP向LLMs暴露数据接口，后端使用bleve进行数据的向量索引，LLMs可以通过MCP向AliyaRAM写入记忆，并在必要的时候读取记忆。
+
 - 同时AliyaRAM通过阿里百炼RAG储存了游戏内的完整文本，LLMs可以通过简单的关键词搜索出任何与之相关的内容。
 
 ## 构建指南
 
-AliayRAM使用纯go实现，直接编译即可。
+编译AliayRAM，你需要保证你拥有c环境和go环境。
+
+- go >= 1.24
+- gcc >= 13.3
+
+```shell
+gcc -v
+go version
+```
 
 ## 未来计划
 

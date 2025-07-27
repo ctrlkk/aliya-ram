@@ -1,10 +1,10 @@
 # Aliya RAM
 
-<strong>Aliya记忆体，通过最少的token实现最真实的Aliya，它同时也是一个`AstrBot`友好的记忆持久化智能体</strong>
+<strong>Aliya记忆体，通过最少的token实现最真实的Aliya，它同时也是一个`AstrBot`友好的记忆持久化MCP Server</strong>
 
 本地[部署](./docs/deploy.md)或加QQ群体验：761178785
 
-![Aliya GO](./docs/aliya_go.png)
+![Aliya GO](./docs/images//aliya_go.png)
 
 ## 它如何运行
 
@@ -14,7 +14,7 @@
 
 ## 构建指南
 
-编译AliayRAM，你需要保证你拥有c环境和go环境。
+编译AliayRAM，你需要拥有c环境和go环境。
 
 - go >= 1.24
 - gcc >= 13.3

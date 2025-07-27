@@ -66,7 +66,7 @@ func NewMCP() (*MCP, error) {
 	tool, _ = protocol.NewTool("search_memory", "检索存储的记忆。这种方法在用户提出任何请求时都会被调用。", SearchMemoryRequest{})
 	mcpServer.RegisterTool(tool, searchMemory)
 
-	tool, _ = protocol.NewTool("list_memories", "列出用户记忆中的所有记忆内容", MemoriesRequest{})
+	tool, _ = protocol.NewTool("list_memories", "列出用户记忆中的所有记忆内容，每当出现新用户或新对话时都应该调用此方法。", MemoriesRequest{})
 	mcpServer.RegisterTool(tool, listMemories)
 
 	tool, _ = protocol.NewTool("delete_all_memories", "删除用户记忆中的所有内容", MemoriesRequest{})
@@ -214,6 +214,18 @@ func deleteAllMemories(ctx context.Context, req *protocol.CallToolRequest) (*pro
 	var recallReq MemoriesRequest
 	if err := protocol.VerifyAndUnmarshal(req.RawArguments, &recallReq); err != nil {
 		return nil, err
+	}
+	err := r.DeleteAllMemories(recallReq.UserId)
+	if err != nil {
+		log.Println("delete all memories error:", err.Error())
+		return &protocol.CallToolResult{
+			Content: []protocol.Content{
+				&protocol.TextContent{
+					Type: "text",
+					Text: "删除失败",
+				},
+			},
+		}, nil
 	}
 	return &protocol.CallToolResult{
 		Content: []protocol.Content{

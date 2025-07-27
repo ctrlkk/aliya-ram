@@ -1,11 +1,11 @@
 # Aliya RAM
 
-<strong>Aliya记忆体，通过最少的token实现最真实的Aliya，它同时也是一个`AstrBot`友好的记忆持久化MCP Server</strong>
+<strong>Aliya记忆体，通过最少的token实现最真实的Aliya，它同时也是一个`AstrBot`友好的记忆持久化MCP Servers</strong>
 
 本地[部署](./docs/deploy.md)或加QQ群体验：761178785
 
 <div style="text-align:center;">
-  <img src="./docs/images/aliya_go.png" style="max-height:60vh; width:auto;" alt="Aliya GO" />
+  <img src="./docs/images/aliya_go.png" style="max-height:60%; width:auto;" alt="Aliya GO" />
 </div>
 
 ## 它如何运行

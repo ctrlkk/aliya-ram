@@ -12,7 +12,7 @@ func TestRAM_SearchMemory(t *testing.T) {
 	}
 	ram.AddMemory("1", "Aliya:哼\n要是我一开始就知道原来是这小家伙...")
 	ram.AddMemory("2", "Aliya:啊\n你们那个时代的人不认识这个很正常\n是人造的培育物种\n不过本身也不是地球上的生物")
-	res, err := ram.SearchMemory("2", "菲涅尔")
+	res, err := ram.SearchMemory("2", "外星生物")
 	if err != nil {
 		t.Fatal(err)
 	}

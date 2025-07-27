@@ -4,7 +4,9 @@
 
 本地[部署](./docs/deploy.md)或加QQ群体验：761178785
 
-![Aliya GO](./docs/images//aliya_go.png)
+<div style="text-align:center;">
+  <img src="./docs/images/aliya_go.png" style="max-height:60vh; width:auto;" alt="Aliya GO" />
+</div>
 
 ## 它如何运行
 

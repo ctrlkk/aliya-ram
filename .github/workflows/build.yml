@@ -2,6 +2,9 @@ name: 构建并上传
 
 on:
   workflow_dispatch:
+  push:
+    branches:
+      - main
 
 env:
   APP_NAME: aliya-ram
@@ -17,10 +20,10 @@ jobs:
       - name: 生成时间版本号
         id: version
         run: echo "VERSION=$(date +'%Y%m%d%H%M%S')" >> $GITHUB_ENV
-      - name: 编译 Linux 可执行文件
-        run: GOOS=linux GOARCH=amd64 go build -o ${{ env.APP_NAME }}-linux
-      - name: 编译 Windows 可执行文件
-        run: GOOS=windows GOARCH=amd64 go build -o ${{ env.APP_NAME }}-windows.exe
+      - name: 编译
+        run: |
+          GOOS=linux GOARCH=amd64 go build -o ${{ env.APP_NAME }}-linux ./cmd/server
+          GOOS=windows GOARCH=amd64 go build -o ${{ env.APP_NAME }}-windows.exe ./cmd/server
       - uses: actions/upload-artifact@v4
         with:
           name: ${{ env.APP_NAME }}-binaries

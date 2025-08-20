@@ -2,9 +2,9 @@ name: 构建并上传
 
 on:
   workflow_dispatch:
-  push:
-    branches:
-      - main
+  # push:
+  #   branches:
+  #     - main
 
 env:
   APP_NAME: aliya-ram

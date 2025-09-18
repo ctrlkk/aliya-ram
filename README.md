@@ -44,4 +44,46 @@ go version
 ## 未来计划
 
 - [ ] AliyaRAM 目前的能力较为简单，我需要手动整理出完整剧情树结构，而不是依赖 RAG 的简单整理，那样并不完美。之后我会使用 bleve 搭建本地知识库。
-- [x] 使用小参数模型与 AstrBot 插件协同工作，提升效率。
+- [ ] 使用小参数模型与 AstrBot 插件协同工作，提升效率。
+
+> 当前方案因效果不佳已被废弃
+
+# 相关插件
+
+用于限制用户图片尺寸：
+https://github.com/ctrlkk/astrbot_plugin_image_size_limit
+
+让bot可以发送贴图增加互动性：
+https://github.com/ctrlkk/astrbot_plugin_meme_manager_lite
+
+显示bot的输入状态：
+https://github.com/ctrlkk/astrbot_plugin_input_state_by_nc
+
+下面是一些还处于Private状态的插件：
+
+日程表插件，支持ai自动日程安排与日程冲突处理：
+https://github.com/ctrlkk/astrbot_plugin_calendar
+
+专为aliya定制的画图插件，后续也可能会增加泛用性，市面上已经有很多类似插件了：
+https://github.com/ctrlkk/astrbot_plugin_canvas_tool
+
+aliya agent与astrbot的绑定：
+https://github.com/ctrlkk/astrbot_plugin_aliya_agent_bridge
+
+aliya agent，由nestjs驱动的agent服务，用于管理知识库和记忆：
+https://github.com/ctrlkk/aliya-ram-agent
+
+# 赞助者名单，感谢以下用户的鼎力支持，排名不分前后
+名单截止至：2025/9/18
+
+暮の色
+幻械
+Cierra
+野兽仙贝
+冈上岩村
+酸汤点点头
+ck567
+灰之魔女
+泥甘玛
+
+还有更多匿名赞助者，感谢大家的支持
